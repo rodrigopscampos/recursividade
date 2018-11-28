@@ -23,6 +23,7 @@ namespace Recursividade
             Console.WriteLine();
 
             Console.WriteLine("Fibonacci");
+            Console.WriteLine("0 = " + Fib(0));
             Console.WriteLine("1 = " + Fib(1));
             Console.WriteLine("2 = " + Fib(2));
             Console.WriteLine("3 = " + Fib(3));
@@ -31,6 +32,20 @@ namespace Recursividade
             Console.WriteLine("6 = " + Fib(6));
             Console.WriteLine("7 = " + Fib(7));
             Console.WriteLine("8 = " + Fib(8));
+
+            Console.WriteLine();
+
+
+            Console.WriteLine("Soma Fibonacci");
+            Console.WriteLine("0 = " + SomaFib(0));
+            Console.WriteLine("1 = " + SomaFib(1));
+            Console.WriteLine("2 = " + SomaFib(2));
+            Console.WriteLine("3 = " + SomaFib(3));
+            Console.WriteLine("4 = " + SomaFib(4));
+            Console.WriteLine("5 = " + SomaFib(5));
+            Console.WriteLine("6 = " + SomaFib(6));
+            Console.WriteLine("7 = " + SomaFib(7));
+            Console.WriteLine("8 = " + SomaFib(8));
 
             Console.WriteLine();
 
@@ -61,6 +76,21 @@ namespace Recursividade
             {
                 return Fib(n - 1) + Fib(n - 2);
             }
+        }
+
+        static int SomaFib(int n)
+        {
+            if (n == 0)
+            {
+                return 0;
+            }
+
+            if (n == 1)
+            {
+                return 1;
+            }
+
+            return Fib(n) + SomaFib(n - 1);
         }
 
         static int Soma(int n)
